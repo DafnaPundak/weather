@@ -1,0 +1,31 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "main": "server.js",
+  "dependencies": {
+    "body": "^5.1.0",
+    "express": "^4.17.1",
+    "font-awesome": "^4.7.0",
+    "handlebars": "^4.5.3",
+    "jquery": "^3.4.1",
+    "mongoose": "^5.8.1",
+    "parser": "^0.1.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DafnaPundak/weather-APP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DafnaPundak/weather-APP/issues"
+  },
+  "homepage": "https://github.com/DafnaPundak/weather-APP#readme",
+  "description": ""
+}
