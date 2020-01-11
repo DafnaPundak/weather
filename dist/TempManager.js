@@ -19,10 +19,11 @@ class TempManager {
                 name: response.name,
                 temperature: response.main.temp,
                 condition: response.weather[0].description,
-                conditionPic: `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`
-
+                conditionPic: `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`,
+                humidity: response.main.humidity
                 // conditionPic: response.weather[0].icon
             }
+            console.log(cityObject)
             this.cityData.push(cityObject)
             // console.log(this.cityData)
         })
@@ -45,6 +46,19 @@ class TempManager {
                 this.cityData = response
                 console.log(this.cityData)
                 console.log(response)
+                return response
+            }
+        })
+    }
+
+    updateCity(cityName) {
+        return $.ajax({
+            url: `/city/${cityName}`,
+            method: "PUT",
+            success: function (response) {
+                let cityToUpdate = this.cityData.find(x => x.name === cityName)
+                cityToUpdate = response
+                console.log(cityToUpdate)
                 return response
             }
         })

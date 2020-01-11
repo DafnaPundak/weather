@@ -49,16 +49,25 @@ router.delete(`/city/:cityName`, (req, res) => {
     City.remove({ name: cityToRemove }, function (err, cities) {
         res.send(cities)
     })
-
     // City.remove({name: cityToRemove}).then(cities => {
     //     res.send(cities)
     // })
 
     // let cities = await City.remove({name: cityToRemove})
     // res.send(cities)
+    
     // DBdata = DBdata.filter(city => city.name !== cityToRemove)
     // res.send(DBdata)
 })
 
-module.exports = router
+router.put(`/city/:cityName`, (req, res) => {
+    const apiKey = "3b530711ed9b615278423b60491c7929"
+    let cityName = req.params.cityName
+    request.get(`http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`, function (error, response, body) {
+        City.update({}, function (err, cities) {
+            res.send(cities)
+        })
+    })
+})
 
+module.exports = router

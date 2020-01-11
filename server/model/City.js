@@ -5,7 +5,8 @@ const citySchema = new Schema ({
     name: String,
     temperature: Number,
     condition: String,
-    conditionPic: String
+    conditionPic: String,
+    humidity: Number
 })
 
 // const c1 = new City ({ name: "Paris", temperature: 300})
