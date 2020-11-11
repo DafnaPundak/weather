@@ -5,7 +5,6 @@ const api = require('./server/routes/api')
 const app = express()
 
 const mongoose = require("mongoose")
-// mongoose.connect("mongodb://localhost/citiesDB", {useNewUrlParser: true})
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/citiesDB', {useNewUrlParser: true})
 
 
