@@ -6,7 +6,7 @@ const app = express()
 
 const mongoose = require("mongoose")
 // mongoose.connect("mongodb://localhost/citiesDB", {useNewUrlParser: true})
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/yourDB', {useNewUrlParser: true})
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/citiesDB', {useNewUrlParser: true})
 
 
 app.use(express.static(path.join(__dirname, 'dist')))
