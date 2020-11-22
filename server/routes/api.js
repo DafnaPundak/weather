@@ -11,8 +11,8 @@ router.get(`/city/:cityName`, (req, res) => {
     function (error, response, body) {
       if (!error && response.statusCode === 200) {
         response = JSON.parse(response.body);
-        temp = Number((response.main.temp) - 273.15).toFixed(2)
-        response.main.temp = temp
+        temp = Number(response.main.temp - 273.15).toFixed(2);
+        response.main.temp = temp;
         res.send(response);
       }
     }
