@@ -4,10 +4,11 @@ const request = require("request");
 const City = require("../model/City");
 
 router.get(`/city/:cityName`, (req, res) => {
-  const apiKey = process.env.WEATHER_API_KEY;
+  // process.env.WEATHER_API_KEY = apiKey;
+  // console.log(process.env.WEATHER_API_KEY)
   let cityName = req.params.cityName;
   request.get(
-    `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`,
+    `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.WEATHER_API_KEY}`,
     function (error, response, body) {
       if (!error && response.statusCode === 200) {
         response = JSON.parse(response.body);
