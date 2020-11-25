@@ -13,7 +13,9 @@
     "parser": "^0.1.4",
     "request": "^2.88.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "minimist": ">=0.2.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
