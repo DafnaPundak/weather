@@ -1,3 +1,4 @@
+require('dotenv').config({ path: '.env.local'})
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -17,7 +18,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/", api);
 
-const port = 3000;
-app.listen(process.env.PORT || port, function () {
-  console.log(`Running server on port ${port}`);
+app.listen(process.env.PORT, function () {
+  console.log(`Running server on port ${process.env.PORT}`);
 });
