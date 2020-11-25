@@ -4,7 +4,7 @@ const request = require("request");
 const City = require("../model/City");
 
 router.get(`/city/:cityName`, (req, res) => {
-  const apiKey = "3b530711ed9b615278423b60491c7929";
+  const apiKey = process.env.WEATHER_API_KEY;
   let cityName = req.params.cityName;
   request.get(
     `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`,
