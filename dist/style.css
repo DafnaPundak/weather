@@ -1,3 +1,13 @@
 body {
-    background-color:lightpink;
+  background-color: rgb(253, 245, 169);
+}
+
+#input-container {
+  margin: 20px;
+}
+
+#main-container {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(252, 230, 190);
 }
