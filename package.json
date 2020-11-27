@@ -30,5 +30,9 @@
     "url": "https://github.com/DafnaPundak/weather-APP/issues"
   },
   "homepage": "https://github.com/DafnaPundak/weather-APP#readme",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": "12.x",
+    "npm": "6.x"
+  }
 }
