@@ -4,18 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Weather App</title>
-    <i class="fas fa-rainbow"></i>
-    <!-- <link rel = "icon" href =  
-"https://media.geeksforgeeks.org/wp-content/cdn-uploads/gfg_200X200.png" 
-        type = "image/x-icon">  -->
-    
-    
+    <link rel="icon" href="iconfinder_rainbow_2995008.ico" />
   </head>
 
   <body>
@@ -26,33 +18,32 @@
       </button>
     </div>
     <div id="container"></div>
-    
-      <script id="city-template" type="text/x-handlebars-template">
-        {{#each allCityData}}
-          <div id="main-container"class="city">
-            <p class="cityName">
-              {{name}}
-            </p>
-            <p class="temp">
-              {{temperature}} °C
-            </p>
-            <p class="conditions">
-              {{condition}}
-            </p>
-            <img class="condImg" src="{{conditionPic}}" alt="" />
-            <p class="humidity">
-              Humidity: {{humidity}}%
-            </p>
-            <button class="saveCity">
-              Save City
-            </button>
-            <button class="removeCity">
-              Remove City
-            </button>
-          </div>
-        {{/each}}
-      </script>
-    </div>
+
+    <script id="city-template" type="text/x-handlebars-template">
+      {{#each allCityData}}
+        <div id="main-container" class="city">
+          <p class="cityName">
+            {{name}}
+          </p>
+          <p class="temp">
+            {{temperature}} °C
+          </p>
+          <p class="conditions">
+            {{condition}}
+          </p>
+          <img class="condImg" src="{{conditionPic}}" alt="" />
+          <p class="humidity">
+            Humidity: {{humidity}}%
+          </p>
+          <button class="saveCity">
+            Save City
+          </button>
+          <button class="removeCity">
+            Remove City
+          </button>
+        </div>
+      {{/each}}
+    </script>
     <script src="jquery/dist/jquery.js"></script>
     <script src="handlebars/dist/handlebars.js"></script>
     <script src="TempManager.js"></script>
