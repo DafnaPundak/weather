@@ -44,7 +44,6 @@ $(`#container`).on("click", ".removeCity", function () {
 
 $(`#container`).on("click", ".refresh", function () {
   let nameToUpdate = $(this).siblings(".cityName").text();
-  console.log(nameToUpdate);
   tempManager.updateCity(nameToUpdate).then((data) => {
     renderer.renderData(tempManager.cityData);
   });
