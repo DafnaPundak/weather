@@ -62,7 +62,7 @@ body {
   display: block;
   font-size: 40px;
   font-weight: 700;
-  letter-spacing: 8px;
+  letter-spacing: 9.2px;
 
   animation-name: moveInLeft;
   animation-duration: 1s;
@@ -112,11 +112,27 @@ body {
 }
 
 #input-container {
-  margin: 20px;
+  margin: 20px 0px 0px 0px;
+}
+
+.button:visited {
+    text-decoration: none;
 }
 
 #main-container {
-  margin: 20px;
-  /* padding: 20px; */
+  margin: 20px 0px 0px 0px;
+  padding: 20px;
   background-color: rgb(252, 230, 190);
+}
+
+.saveCity {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+}
+
+.removeCity {
+    margin: 5px;
+    height: 40px;
+    width: 40px;
 }

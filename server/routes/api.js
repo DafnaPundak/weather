@@ -41,7 +41,6 @@ router.delete(`/city/:cityName`, (req, res) => {
   let cityToRemove = req.params.cityName;
   City.deleteOne({ name: cityToRemove }, function (err, cities) {
     res.send(cities);
-    console.log(cities)
   });
 });
 

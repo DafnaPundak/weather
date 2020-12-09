@@ -1,4 +1,4 @@
-require('dotenv').config({ path: '.env.local'})
+require("dotenv").config({ path: ".env.local" });
 const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser");
@@ -8,6 +8,7 @@ const app = express();
 const mongoose = require("mongoose");
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/citiesDB", {
   useNewUrlParser: true,
+  useUnifiedTopology: true,
 });
 
 app.use(express.static(path.join(__dirname, "dist")));

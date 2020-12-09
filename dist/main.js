@@ -26,25 +26,19 @@ const handleSearch = function () {
     .catch((err) => {
       console.error(err);
     });
+  $(`#cityInput`).val('');
 };
 
-$(`#searchWeatherButton`).on("click", function () {
+$(`.searchWeatherButton`).on("click", function () {
   handleSearch();
 });
 
 $(`#container`).on("click", ".saveCity", function () {
   let nameDomSave = $(this).siblings(`.cityName`).text();
-  tempManager.saveCity(nameDomSave).then((data) => {});
+  tempManager.saveCity(nameDomSave).then(() => loadPage());
 });
 
 $(`#container`).on("click", ".removeCity", function () {
   let nameDomRemove = $(this).siblings(`.cityName`).text();
-  tempManager.removeCity(nameDomRemove).then((data) => {});
-});
-
-$(`#container`).on("click", ".refresh", function () {
-  let nameToUpdate = $(this).siblings(".cityName").text();
-  tempManager.updateCity(nameToUpdate).then((data) => {
-    renderer.renderData(tempManager.cityData);
-  });
+  tempManager.removeCity(nameDomRemove).then(() => loadPage());
 });
