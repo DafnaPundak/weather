@@ -5,7 +5,11 @@ class TempManager {
 
   getDataFromDB() {
     return $.get(`/cities`).then((data) => {
-      this.cityData = data;
+      let reverseData = [];
+      for (let i = data.length - 1; i > 0; i--) {
+        reverseData.push(data[i]);
+      }
+      this.cityData = reverseData;
     });
   }
 
@@ -18,7 +22,7 @@ class TempManager {
         conditionPic: `http://openweathermap.org/img/wn/${response.weather[0].icon}@2x.png`,
         humidity: response.main.humidity,
       };
-      this.cityData.push(cityObject);
+      this.cityData.unshift(cityObject);
     });
   }
 
